@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NAAC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="image/image2.png" type="image/gif" sizes="16x16"> -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/new_css.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/jquery-ui.min.js"></script> -->
+    <!-- <script type="text/javascript" src="js/jquery.fullPage.js"></script> -->
+</head>
+
+<body>
+    <div class="container col-md-12 col-sm-12 col-xs-12 home_page_1">
+        <div class="col-md-12 col-sm-12 col-xs-12 home_page_2">
+            <div class="col-md-8 col-sm-8 col-xs-12 home_first_image">
+                <div class="col-md-1 col-sm-1 col-xs-3">
+                    <img src="image/home/image2.png" data-toggle="modal" data-target="#myModal">
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-9 home_registeration">
+                    <span class="home_registeration_para raleway_bold">REGISTRATION</span>
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-12">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li> <a href="index.html" class="nav_tab"><span class="menu_homepage source_regular active_menu"><img src="image/home/home_icon.png"></span></a></li>
+                            <li><a href="#secondPage" class="nav_tab"><span class="menu_homepage source_regular">ABOUT</span></a></li>
+                            <li><a href="#3rdPage" class="nav_tab"><span class="menu_homepage source_regular">AGENDA</span></a></li>
+                            <li><a href="#lastPage" class="nav_tab"><span class="menu_homepage source_regular">DELEGATES</span></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <p class="home_first_hedr raleway_light text-center">Global Summit</p>
+                <p class="raleway_thin home_first_para text-center"><span class="raleway_extrabold">ON</span> Quality Higher Education</p>
+                <p class="raleway_light home_first_para_inner text-center">Sharing Values and Building Trust Beyond Borders </p>
+                <div class="col-md-3 col-sm-3"></div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                <p class="text-center raleway_regular">BENGALURU, INDIA<span class="raleway_bold"> ON </span>16-17 SEPTEMBER 2016</p>
+                <div class="col-md-1 col-sm-1"></div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                <img src="image/home/image3.png">
+                </div>
+                <div class="col-md-1 col-sm-1 col-xs-1"></div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                	   <img src="image/home/image4.jpg" class="homepage_img_apqn">
+                </div>
+                 <div class="col-md-2 col-sm-2"></div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+            </div>
+
+
+
+
+
+           
+        </div>
+         <div class="col-md-4 col-sm-4 col-xs-12 home_page_right_pad">
+         <div class="col-md-12 col-sm-12 col-xs-12 home_page_right">
+            <div class="col-md-3 col-sm-3 col-xs-12">
+            <span class="home_page_date">07 days</span>
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+            <span>16 hours</span>
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+            <span>47 minutes</span>
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+            <span>12 seconds</span>
+            </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 homepgae_right_video">
+              <!-- <div id="player"></div> -->
+                  <img src="image/home/image12.jpg" class="home_pag_utub">
+
+
+                    <script type="text/javascript">
+                        var tag = document.createElement('script');
+tag.src = "http://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var player;
+
+onYouTubeIframeAPIReady = function () {
+    player = new YT.Player('player', {
+        height: '400px',
+        width: '100%',
+        padding:'0',
+        videoId: 'J4rBDsimsmQ',  // youtube video id
+        playerVars: {
+            'autoplay': 0,
+            'rel': 0,
+            'showinfo': 0,
+            'modestbranding': 1,
+            'autohide': 2,
+            'border':0,
+           
+            'enablejsapi':1,
+            'controls':2
+
+            
+
+        },
+        events: {
+            'onStateChange': onPlayerStateChange
+        }
+    });
+}
+
+onPlayerStateChange = function (event) {
+    if (event.data == YT.PlayerState.ENDED) {
+        $('.secnd_pag_utub').fadeIn('normal');
+    }
+}
+
+$(document).on('click', '.secnd_pag_utub', function () {
+    $(this).fadeOut('normal');
+    player.playVideo();
+});
+                    </script>
+                    <script type="text/javascript">
+                    var blink = function() {
+                        $('.blink').animate({
+                            opacity: '0'
+                        }, function() {
+                            $(this).animate({
+                                opacity: '1'
+                            }, blink);
+                        });
+                    }
+
+                    blink();
+                    </script>
+
+
+                  </div>
+            </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="row home_first_footer">
+            <p class="raleway_regular text-center">KEY QUALITY NETWORKS AND AGENCIES FROM</p>
+
+
+             <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+            <div class="col-md-2 col-sm-2"></div>
+            <div class="col-md-2 col-sm-2 col-xs-12">
+            	<img src="image/home/image6.png">
+            	<p class="text-center">ASIA</p>
+            </div>
+             <div class="col-md-1 col-sm-1 col-xs-12">
+            	<img src="image/home/image7.png">
+            	<p class="text-center">EUROPE</p>
+            </div>
+
+
+            <div class="col-md-1 col-sm-1 col-xs-12">
+            	<img src="image/home/image8.png">
+            	<p class="text-center">USA</p>
+            	</div>
+            	 <div class="col-md-2 col-sm-2 col-xs-12">
+            	<img src="image/home/image9.jpg">
+            		<p class="text-center">LATIN AMERICA</p>
+            	</div>
+            	 <div class="col-md-1 col-sm-1 col-xs-12">
+            	<img src="image/home/image10.jpg">
+            	<p class="text-center">AFRICA</p>
+
+            </div>
+             <div class="col-md-1 col-sm-1 col-xs-12">
+             	<img src="image/home/image11.jpg">
+             	    	<p class="text-center">BANGKOK</p>
+             </div>
+             <div class="col-md-2 col-sm-2">
+             	
+             </div>
+
+<!--  <div class="col-md-2 col-sm-2"></div>
+ <div class="col-md-10 col-sm-10 col-xs-12">
+<img src="image/home/image6.png">
+<p class="text-center">ASIA</p>
+<img src="image/home/image7.png">
+<p class="text-center">EUROPE</p>
+<img src="image/home/image8.png">
+<p class="text-center">USA</p>
+            	<img src="image/home/image9.jpg">
+            	<p class="text-center">LATIN AMERICA</p>
+            	<img src="image/home/image10.jpg">
+            	<p class="text-center">AFRICA</p>
+            	<img src="image/home/image11.jpg">
+            	<p class="text-center">BANGKOK</p>
+
+
+</div>
+ <div class="col-md-2 col-sm-2"></div> -->
+    </div>
+    </div>
+</body>
+
+</html>
