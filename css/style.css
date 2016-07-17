@@ -11,6 +11,13 @@ color: white;
   /*  width: 100%;*/
 }
 
+.delegate_first_image{
+	background-image: url(../image/agenda/image5.png);
+	min-height:528px;
+	  background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .home_page_1{
 	padding-left: 0;
 	padding-right: 0;
@@ -21,7 +28,9 @@ color: white;
 }
 
 p.home_first_hedr{
-	font-size: 111px;
+	font-size: 7em;
+	position: relative;
+	top: .3em;
 }
 p.home_first_para{
 	font-size: 54.77px;
@@ -30,16 +39,17 @@ p.home_first_para_inner{
 	font-size: 31.8px;
 }
 
-span.home_page_date{
-	background: red;
-}
+
 .home_first_footer{
 	background-image: url(../image/home/image5.jpg);
 	min-height: 16em;
+	padding-top: 2em;
+	font-size: 14px;
 }
 .home_page_right{
-	background-color: red;
+	background-color: #3994ed;
 	height: 126px;
+	padding-top: 5px;
 }
 .home_page_right_pad,.homepgae_right_video{
 	padding: 0;
@@ -53,4 +63,311 @@ span.home_registeration_para {
 img.homepage_img_apqn
 {
 	    margin-top: 1em;
+}
+span.home_page_days{
+	font-size: 45.87px;
+}
+span.home_page_date{
+	font-size: 14px;
+}
+.homepage_days_date{
+	    border-right: 2px solid #5db5ec;
+	    padding-top: 1em;
+	    padding-bottom: 15px;
+}
+.homepage_days_date1{
+	    /*border-right: 1px solid black;*/
+    padding-top: 1em;
+    padding-bottom: 15px;
+}
+.home_page_contct{
+	margin-top: 1em;
+
+}
+.home_registeration{
+	margin-top:1.4em;
+}
+.home_page_footer_img1{
+	    position: relative;
+    left: -4.3em;
+
+}
+.home_page_footer_img2{
+	    position: relative;
+    left: -1.5em;
+}
+
+.home_page_footer_img4{
+	margin-left: -3.3em;
+}
+.home_page_footer_img5{
+	margin-left: 2em;
+}
+p.homepage_asia{
+
+margin-left: 3em;
+}
+p.homepage_europe{
+
+margin: l;
+
+margin-left: 3em;
+}
+p.homepage_usa{
+
+margin-left: 3.5em;
+}
+p.homepage_latin{
+
+margin-left: 2em;
+}
+p.homepage_africa{
+
+margin-left: 3.5em;
+}
+p.homepage_bangkok{
+	
+margin-left: 2.5em;
+}
+.caret-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid rgba(0, 0, 0, 0);
+    border-right: 4px solid rgba(0, 0, 0, 0);
+    border-bottom: 4px solid;
+    
+    display: inline-block;
+    margin-left: 2px;
+    vertical-align: middle;
+}
+.nav>li>a:hover, .nav>li>a:focus{
+	background: transparent;
+}
+a{
+	color: white;
+}
+a:hover, a:focus{
+	color:black;
+	text-decoration: none;
+}
+.nav>li>a:hover, .nav>li>a:focus{
+	background: transparent !important;
+}
+ul.dropdown-menu{
+	/*position: relative;*/
+	top: 3em;
+}
+.modal-body{
+	/*color:black;*/
+	    background: #338ee8;
+}
+p.contact_mail a{
+	color:#71b8ff;
+
+}
+p.contact_mail{
+		margin-top:2em;
+}
+p.contact_hdr_con{
+	font-size: 24px;
+	color:#126fca;
+}
+p.contact_hdr_con1{
+	font-size: 18px;
+}
+p.contact_phon{
+	margin-top: 3em;
+}
+.dropdown-menu{
+	border-radius: 0;
+	min-width: 75px;
+	
+}
+
+
+ul.dropdown-menu{
+  background: #3993ec;
+    background: -webkit-linear-gradient(#1976d2, #3993ec); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#1976d2, #3993ec); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#1976d2, #3993ec); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#1976d2, #3993ec);
+}
+.dropdown-menu>li>a{
+	color:white;
+}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus{
+	background: transparent;
+}
+
+
+/*-------------------------------------DELEGATES---------------------------------------*/
+
+.delegate_right{
+	background: #3993ec;
+    background: -webkit-linear-gradient(#1a77d3, #3a94ee); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#1a77d3, #3a94ee); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#1a77d3, #3a94ee); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#1a77d3, #3a94ee);
+    min-height: 528px;
+    position: relative;
+    left: -1px;
+    padding-top: 10em;
+}
+
+.delegate_date_popup{
+	color:black;
+}
+span.delegate_date_popup1{
+ background: -webkit-linear-gradient(#969696, #f3f3f3,#969696); /* For Safari 5.1 to 6.0 */
+ background: -o-linear-gradient(#969696, #f3f3f3,#969696); /* For Opera 11.1 to 12.0 */
+ background: -moz-linear-gradient(#969696, #f3f3f3,#969696); /* For Firefox 3.6 to 15 */
+ background: linear-gradient(#969696, #bab6b6,#969696);
+ padding: 4px 20px;
+  cursor: pointer;
+}
+
+span.delegate_date_popup2{
+ background: -webkit-linear-gradient(#1c78d4, #3691eb); /* For Safari 5.1 to 6.0 */
+ background: -o-linear-gradient(#1c78d4, #3691eb); /* For Opera 11.1 to 12.0 */
+ background: -moz-linear-gradient(#1c78d4, #3691eb); /* For Firefox 3.6 to 15 */
+ background: linear-gradient(#1c78d4, #3691eb);
+ padding: 4px 20px;
+ margin-left: 1em;
+ cursor: pointer;
+}
+.delegate_second_button{
+	margin-top: 4em;
+}
+p.delegate_timing1{
+	font-size: 72px;
+	color: #3994ed;
+}
+
+span.delegate_timing1_1{
+	font-size: 36px;
+}
+
+p.delegate_timing2{
+	    width: 50%;
+    text-align: center;
+    padding: 3px 0;
+    background: #2984df;
+}
+
+p.delegate_timing3{
+color: #3994ed;
+text-align: center;
+font-size: 18px;
+}
+p.delegate_timing4{
+font-size: 14px;
+color: #666666;
+text-align: center;
+}
+
+p.delegate_timing5{
+font-size: 14px;
+color: #666666;
+text-align: center;
+}
+
+.delegate_timing6{
+	margin-top: 8em;
+}
+
+.delegate_timing7{
+	border-right: 3px solid #3994ed;
+}
+
+.delegate_timing8{
+	margin-top: 3em;
+}
+
+p.delegate_timing9{
+	color: #4a75a0;
+    font-size: 10px;
+    font-weight: bold;
+    position: absolute;
+    /* text-align: center; */
+    margin-left: 47%;
+    margin-top: -2em;
+
+}
+
+.delegate_timing10{
+	    margin-top: 5em;
+}
+.delegate_timing11{
+	margin-top: 3em;
+}
+.delegate_timing12{
+	margin-top: 2em;
+}
+.delegate_timing13{
+	margin-right: 4em;
+}
+
+p.delegates_hd{
+	font-size: 18px;
+}
+
+.delegate_timing_section2{
+	display: none;
+}
+
+/*----------------------------agenda----------------------------*/
+
+.agenda_right{
+	background: #3993ec;
+    background: -webkit-linear-gradient(#1a77d3, #3a94ee); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#1a77d3, #3a94ee); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#1a77d3, #3a94ee); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#1a77d3, #3a94ee);
+    min-height: 528px;
+    position: relative;
+    left: -1px;
+    padding-top: 2em;
+}
+
+p.agenda_left_timng1{
+font-size: 18px;
+color: #12212f;
+    margin-top: 25%;
+}
+
+p.agenda_left_timng2{
+font-size: 16px;
+color: #12212f;
+
+}
+
+p.agenda_left_timng1_1{
+	font-size: 18px;
+color: #12212f;
+    margin-top: 14%;
+}
+
+p.agenda_right_timg_name1{
+color:#12212f;
+margin:0;
+}
+
+p.agenda_right_timg_name2{
+color:#12212f;margin:0;
+}
+
+p.agenda_right_timg_name3{
+color:#12212f;
+margin:0;
+}
+
+p.agenda_right_timg_name4{
+	color: #12212f;
+}
+
+.agenda_timg_rit_scnd_row{
+	margin-top: 2em;
+}
+.agenda_timg_rit_scnd_row1{
+	margin-top: 3em;
 }

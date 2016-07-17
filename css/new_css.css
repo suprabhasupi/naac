@@ -115,3 +115,19 @@
 .raleway_bold{
     font-family:raleway_bold;
 }
+
+@font-face {
+        font-family:raleway_semibold;
+        src: url(font/Raleway-SemiBold.ttf);
+}
+.raleway_semibold{
+    font-family:raleway_semibold;
+}
+
+@font-face {
+        font-family:raleway_medium;
+        src: url(font/Raleway-Medium.ttf);
+}
+.raleway_medium{
+    font-family:raleway_medium;
+}
