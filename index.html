@@ -11,9 +11,14 @@
     <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <!-- <script src="js/jquery-ui.min.js"></script> -->
+    <script src="js/jssor.slider.min.js"></script>
     <!-- <script type="text/javascript" src="js/jquery.fullPage.js"></script> -->
 </head>
+<style type="text/css">
+    body{
+            background: #074078;
+    }
+</style>
 <script type="text/javascript">
    var end = new Date('09/16/2016 10:1 AM');
 
@@ -46,17 +51,62 @@
 
     timer = setInterval(showRemaining, 1000);
 </script>
+
+
+<!-- --------------for slider---------------------- -->
+
+ <script>
+        jssor_1_slider_init = function() {
+            
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:1200,$Opacity:2}
+            ];
+            
+            var jssor_1_options = {
+              $AutoPlay: true,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+            
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+            
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 600);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            //responsive code end
+        };
+    </script>
 <body>
     <div class="container col-md-12 col-sm-12 col-xs-12 home_page_1">
         <div class="col-md-12 col-sm-12 col-xs-12 home_page_2">
             <div class="col-md-8 col-sm-8 col-xs-12 home_first_image">
-                <div class="col-md-1 col-sm-1 col-xs-3 home_page_contct">
-                    <img src="image/home/image2.png" data-toggle="modal" data-target="#myModal" class="contact_modal">
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-9 home_registeration">
-                    <span class="home_registeration_para raleway_black">REGISTRATION</span>
-                </div>
-                <div class="col-md-9 col-sm-9 col-xs-12">
+                <!-- <div class="col-md-1 col-sm-1 col-xs-3 home_page_contct"> -->
+                    <!-- <img src="image/home/image2.png" data-toggle="modal" data-target="#myModal" class="contact_modal"> -->
+                <!-- </div> -->
+             
+                <!-- <div class="col-md-12 col-sm-12 col-xs-12"> -->
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                             <span class="icon-bar"></span>
@@ -66,30 +116,49 @@
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav raleway_regular">
-                            <li> <a href="index.html" class="nav_tab"><span class="menu_homepage source_regular active_menu"><img src="image/home/home_icon.png"></span></a></li>
+                            <li> <a href="index.html"><span class="source_regular active_menu"><img src="image/home/home.png" class="home_menu_home"></span></a></li>
                             <li class="dropdown">
                                 <!-- <a href="#secondPage" class="nav_tab"><span class="menu_homepage source_regular">ABOUT</span></a> -->
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">ABOUT <b class="caret"></b></a>
+
+                                <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">ABOUT <b class="caret"></b></a> -->
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">ABOUT CONFERENCE</a>
                                 <ul class="dropdown-menu">
+                                    <li><a href="#">WELCOME TO GSQ 2016</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">THEMES</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">AGENDA</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                            <a href="#k"><span class="menu_homepage ">PROGRAM DETAILS</span></a>
+                            
+                            </li>
+                            <li class="dropdown">
+                            <a href="#k"><span class="menu_homepage">ORGANISERS</span></a>
+                            <ul class="dropdown-menu">
                                     <li><a href="#">NAAC</a></li>
                                     <li class="divider"></li>
                                     <li><a href="#">APQN</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">THEMES</a></li>
+                                    <!-- <li class="divider"></li>
+                                    <li><a href="#">AGENDA</a></li> -->
                                 </ul>
+
                             </li>
-                            <li><a href="agenda.html" class="nav_tab"><span class="menu_homepage ">AGENDA</span></a></li>
-                            <li><a href="delegate.html" class="nav_tab"><span class="menu_homepage">DELEGATES</span></a></li>
+                             <li><a href="#k"><span class="menu_homepage">KEY SPEAKERS</span></a></li>
+                              <li><a href="#k"><span class="menu_homepage">ACCOMODATION</span></a></li>
+                               <li><a href="#k"><span class="menu_homepage">REGISTER</span></a></li>
+                               <li><a href="#k"><span class="menu_homepage" data-toggle="modal" data-target="#myModal" >CONTACT</span></a></li>
                         </ul>
                     </div>
-                </div>
+                <!-- </div> -->
                  <p class="home_first_hedr raleway_thin text-center">Global Summit</p>
                 <p class="raleway_thin home_first_para text-center"><span class="raleway_black">ON</span> Quality Higher Education</p>
                 <p class="raleway_light home_first_para_inner text-center">Sharing Values and Building Trust Beyond Borders </p>
-                <div class="col-md-3 col-sm-3"></div>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <p class="text-center raleway_regular">BENGALURU, INDIA<span class="raleway_bold"> ON </span>16-17 SEPTEMBER 2016</p>
-                    <div class="col-md-1 col-sm-1"></div>
+                <div class="col-md-2 col-sm-2"></div>
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <p class="text-center raleway_regular home_adres"  data-toggle="modal" data-target="#myModal1" ><u>LE MERIDIEN, OPPOSITE GOLF CLUB,BENGALURU, INDIA<span class="raleway_bold"> ON </span>16-17 SEPTEMBER 2016</u></p>
+                    <div class="col-md-2 col-sm-2"></div>
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <img src="image/home/image3.png">
                     </div>
@@ -99,7 +168,7 @@
                     </div>
                     <div class="col-md-2 col-sm-2"></div>
                 </div>
-                <div class="col-md-3 col-sm-3">
+                <div class="col-md-2 col-sm-2">
                 </div>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12 home_page_right_pad">
@@ -120,76 +189,126 @@
                        <span id="countdown3"  class="home_page_days text-center"></span>
     <div class="smalltext raleway_light">Seconds</div>
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-                    <div class="col-md-12 col-sm-12 col-xs-12 homepgae_right_video">
-                       <!--  <img src="image/home/image13.jpg" style="margin-top: 0.35em;width: 109%;position: relative;left: -1em;">
- -->                       
-
-  <div id="player"></div>
-                         <!-- <img src="image/home/image12.jpg" class="home_pag_utub"> -->
-                        <script type="text/javascript">
-                        var tag = document.createElement('script');
-                        tag.src = "http://www.youtube.com/iframe_api";
-                        var firstScriptTag = document.getElementsByTagName('script')[0];
-                        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-                        var player;
-
-                        onYouTubeIframeAPIReady = function() {
-                            player = new YT.Player('player', {
-                                height: '402px',
-                                width: '107.15%',
-                                padding: '0',
-                                videoId: 'z1yvPk1GDUY',
-                                playerVars: {
-                                    'autoplay': 0,
-                                    'rel': 0,
-                                    'showinfo': 0,
-                                    'modestbranding': 1,
-                                    'autohide': 2,
-                                    'border': 0,
-
-                                    'enablejsapi': 1,
-                                    'controls': 2
-
-
-
-                                },
-                                events: {
-                                    'onStateChange': onPlayerStateChange
-                                }
-                            });
-                        }
-
-                        onPlayerStateChange = function(event) {
-                            if (event.data == YT.PlayerState.ENDED) {
-                                $('.secnd_pag_utub').fadeIn('normal');
-                            }
-                        }
-
-                        $(document).on('click', '.secnd_pag_utub', function() {
-                            $(this).fadeOut('normal');
-                            player.playVideo();
-                        });
-                        </script>
-                         
-                    </div>
                 </div>
+<div class="col-md-12 col-sm-12 col-xs-12 home_registration_block">
+<p class="raleway_regular home_registration">Registration for GSQ 2016 ends on 18-08-2016</p>
+
+
+</div>
+
+<!-- -------------------------slider----------------------- -->
+
+
+    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 510px; overflow: hidden; visibility: hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+          <!--   <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div> -->
+        </div>
+        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 511px; overflow: hidden;">
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="image/home/image23.png" />
             </div>
-            <div class="col-md-12 col-sm-12 col-xs-12">
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="image/home/image23.png" />
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="image/home/image23.png" />
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="image/home/image23.png" />
+            </div>
+            <a data-u="ad" href="http://www.jssor.com" style="display:none">jQuery Slider</a>
+        
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+            <!-- bullet navigator item prototype -->
+            <div data-u="prototype" style="width:16px;height:16px;"></div>
+        </div>
+        <!-- Arrow Navigator -->
+        <span data-u="arrowleft" class="jssora12l" style="top:0px;left:0px;width:30px;height:46px;" data-autocenter="2"></span>
+        <span data-u="arrowright" class="jssora12r" style="top:0px;right:0px;width:30px;height:46px;" data-autocenter="2"></span>
+    </div>
+ <script>
+        jssor_1_slider_init();
+    </script>
+
+    <!-- -----------------------slider end----------------------- -->
+
+    
+                
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 home_first_footer_contnt">
                 <div class="row home_first_footer">
-                    <p class="raleway_regular text-center">KEY QUALITY NETWORKS AND AGENCIES FROM</p>
-                    <!-- Modal -->
+                    <p class="raleway_semibold text-center home_partners">PARTNER NETWORKS</p>
+                  
+                    <div class="col-md-2 col-sm-2"></div>
+                    <div class="col-md-2 col-sm-2 col-xs-12">
+                        <img src="image/home/image14.png" class="center-block">
+                        <p class="raleway_regular text-center partners_inner_text">CHEA</p>
+                    </div>
+                    <div class="col-md-1 col-sm-1 col-xs-12 home_page_footer_img1">
+                        <img src="image/home/image15.png" class="center-block">
+                        <p class="raleway_regular text-center partners_inner_text">ENQA</p>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-12 home_page_footer_img2">
+                        <img src="image/home/image16.png" class="center-block">
+                        <p class="raleway_regular text-center partners_inner_text">ANQAHE</p>
+                    </div>
+                    <div class="col-md-1 col-sm-1 col-xs-12 home_page_footer_img3">
+                        <img src="image/home/image17.png" class="center-block">
+                        <p class="raleway_regular text-center partners_inner_text">ECA</p>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-12 home_page_footer_img4">
+                        <img src="image/home/image18.png" class="center-block">
+                        <p class="raleway_regular text-center partners_inner_text">AQAN</p>
+                    </div>
+                  <!--   <div class="col-md-1 col-sm-1 col-xs-12 home_page_footer_img5">
+                        <img src="image/home/image11.jpg">
+                        <p class="homepage_bangkok raleway_regular">BANGKOK</p>
+                    </div> -->
+                    <div class="col-md-2 col-sm-2">  </div>
+                  </div>
+                    </div>
+
+
+
+<!-- ----------------------2nd footer----------------- -->
+    <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="row home_first_footer1">
+                    <p class="raleway_semibold text-center home_partners">PARTNER QA AGENCIES</p>
+                  
+                    <div class="col-md-2 col-sm-2"></div>
+                    <div class="col-md-2 col-sm-2 col-xs-12 home_page_footer_img2_1">
+                        <img src="image/home/image19.png" class="center-block">
+                        <p class="raleway_regular text-center partners_inner_text">QQA UK</p>
+                    </div>
+                    <!-- <div class="col-md-1 col-sm-1 col-xs-12 home_page_footer_img1">
+                        <img src="image/home/image15.png" class="center-block">
+                        <p class="raleway_regular text-center partners_inner_text">ENQA</p>
+                    </div> -->
+                    <div class="col-md-3 col-sm-3 col-xs-12 home_page_footer_img2_2">
+                        <img src="image/home/image20.png" class="center-block">
+                        <p class="raleway_regular text-center partners_inner_text">TEQSA AUSTRALIA </p>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-12 home_page_footer_img3">
+                        <img src="image/home/image21.png" class="center-block">
+                        <p class="raleway_regular text-center partners_inner_text">QQA BAHRAIN</p>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-12 home_page_footer_img4_4">
+                        <img src="image/home/image22.png" class="center-block">
+                        <p class="raleway_regular text-center partners_inner_text">TEC MAURITIUS</p>
+                    </div>
+                  <!--   <div class="col-md-1 col-sm-1 col-xs-12 home_page_footer_img5">
+                        <img src="image/home/image11.jpg">
+                        <p class="homepage_bangkok raleway_regular">BANGKOK</p>
+                    </div> -->
+                    <div class="col-md-1 col-sm-1">  </div>
+                  </div>
+                    </div>
+
+   <!-- Modal -->
                     <div class="modal fade" id="myModal" role="dialog">
                         <div class="modal-dialog">
                             <!-- Modal content-->
@@ -213,51 +332,42 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 col-sm-2"></div>
-                    <div class="col-md-2 col-sm-2 col-xs-12">
-                        <img src="image/home/image6.png">
-                        <p class="homepage_asia raleway_regular">ASIA</p>
-                    </div>
-                    <div class="col-md-1 col-sm-1 col-xs-12 home_page_footer_img1">
-                        <img src="image/home/image7.png">
-                        <p class="homepage_europe raleway_regular">EUROPE</p>
-                    </div>
-                    <div class="col-md-1 col-sm-1 col-xs-12 home_page_footer_img2">
-                        <img src="image/home/image8.png">
-                        <p class="homepage_usa raleway_regular">USA</p>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-12 home_page_footer_img3">
-                        <img src="image/home/image9.jpg">
-                        <p class="homepage_latin raleway_regular">LATIN AMERICA</p>
-                    </div>
-                    <div class="col-md-1 col-sm-1 col-xs-12 home_page_footer_img4">
-                        <img src="image/home/image10.jpg">
-                        <p class="homepage_africa raleway_regular">AFRICA</p>
-                    </div>
-                    <div class="col-md-1 col-sm-1 col-xs-12 home_page_footer_img5">
-                        <img src="image/home/image11.jpg">
-                        <p class="homepage_bangkok raleway_regular">BANGKOK</p>
-                    </div>
-                    <div class="col-md-2 col-sm-2">
-                    </div>
-                    <!--  <div class="col-md-2 col-sm-2"></div>
- <div class="col-md-10 col-sm-10 col-xs-12">
-<img src="image/home/image6.png">
-<p class="text-center">ASIA</p>
-<img src="image/home/image7.png">
-<p class="text-center">EUROPE</p>
-<img src="image/home/image8.png">
-<p class="text-center">USA</p>
-            	<img src="image/home/image9.jpg">
-            	<p class="text-center">LATIN AMERICA</p>
-            	<img src="image/home/image10.jpg">
-            	<p class="text-center">AFRICA</p>
-            	<img src="image/home/image11.jpg">
-            	<p class="text-center">BANGKOK</p>
+
+                    <!-- 2md modal---------- -->
+
+                      <!-- Modal -->
+                    <div class="modal fade" id="myModal1" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                               
+                                <div class="modal-body text-center">
+                                    <p class="raleway_semibold contact_hdr_con">VENU DETAILS</p>
+                                    <p class="raleway_semibold contact_hdr_con1">LE MERIDEN</p>
+                                    <p class="raleway_regular">No. 28, Sankey Road</p>
+                                    <p class="raleway_regular">P.B.No. 174, (Opposite Bangalore Golf Club)</p>
+                                    <p class="raleway_regular">Bengaluru-560052</p>
+                                    <p class="raleway_regular">Karnataka, India</p>
+ <!-- DIRECTION TO VENUE -->
+                                    <p class="raleway_regular home_button_venue center-block text-center"><img src="image/home/time.png" class="home_tim_img"> <a target="_blank" href="https://www.google.co.in/maps/@12.990246,77.5844189,17z" target='_blank' title="Click to see this area on Google Maps" style="position: static; overflow: visible; float: none; display: inline;"><span class="text-center contact_inner3 source_light">DIRECTION TO VENUE</span></a></p>
+
+                                    
 
 
-</div>
- <div class="col-md-2 col-sm-2"></div> -->
+
+
+
+
+
+                                    <p class="contact_phon raleway_regular"><img src="image/contact/image1.png" class="contact_phn_img">(91) (80) 22262233</p>
+                                    <p class="contact_mail raleway_regular"><img src="image/contact/image2.png"  class="contact_phn_img">(91) (80) 22267676</p>
+                                </div>
+                                <!-- <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
                     <script type="text/javascript">
                     $(function() {
                         $(".dropdown").hover(
@@ -273,8 +383,8 @@
                             });
                     });
                     </script>
-                </div>
-            </div>
+                
+            
 </body>
 
 </html>
