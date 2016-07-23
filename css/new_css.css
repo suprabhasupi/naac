@@ -19,7 +19,8 @@
         src: url(font/Raleway-ExtraBold.ttf);
 }
 .raleway_extrabold{
-    font-family:raleway_extrabold;
+    font-family:raleway_extrabold
+;
 }
 
 @font-face {
@@ -69,4 +70,30 @@
 .raleway_black{
     font-family:raleway_black;
 }
+
+
+@font-face {
+        font-family:raleway_extra_lit;
+        src: url(font/Raleway-ExtraLight.ttf);
+}
+.raleway_extra_lit{
+    font-family:raleway_extra_lit;
+}
+
+
+@font-face {
+        font-family:opensans_reg;
+        src: url(font/OpenSans-Regular.ttf);
+}
+.opensans_reg{
+    font-family:opensans_reg;
+}
+@font-face {
+        font-family:opensans_light;
+        src: url(font/OpenSans-Light.ttf);
+}
+.opensans_light{
+    font-family:opensans_light;
+}
+
 
