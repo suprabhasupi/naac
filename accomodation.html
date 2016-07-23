@@ -8,13 +8,13 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/new_css.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.css"> -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 <style type="text/css">
 div#myNavbar {
     float: right;
+    z-index: 10000;
 }
 
 body {
@@ -84,7 +84,7 @@ li.controller{
     position: absolute;
     width: 15px;
     height: 15px;
-    z-index: 99;
+    /*z-index: 99;*/
     top: -2px;
     border: 1px solid #0081ff;
     background: #0081ff;
@@ -118,7 +118,7 @@ section#r1_section{
 
 <body>
     <div class="container col-md-12 col-sm-12 col-xs-12 hotel_dew_drops_frst_page" style="padding:0;">
-        <div class="col-md-12 col-sm-12 col-xs-12 mainemenu">
+        <div class="col-md-12 col-sm-12 col-xs-12 mainemenu" style="z-index:9;">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
@@ -127,7 +127,7 @@ section#r1_section{
                 </button>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav raleway_regular">
+                 <ul class="nav navbar-nav raleway_regular">
                     <li> <a href="index.html"><span class="source_regular active_menu"><img src="image/hotel_trinityle/image11.png" class="home_menu_home"></span></a></li>
                     <li class="dropdown">
                         <a href="about.html"><span class="menu_homepage">ABOUT CONFERENCE</span></a>
